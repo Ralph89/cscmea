@@ -1,0 +1,62 @@
+<html>
+<title>Dark Horizon MEA Resources </title>
+<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-1.2.6.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#add").click(function() {
+          $('#mytable tbody>tr:last').clone(true).insertAfter('#mytable tbody>tr:last');
+          return false;
+        });
+    });
+</script>
+<body>
+
+<img src="DH_LOGO.png"></img>
+<p></p>
+<p><b>Please submit your MEA results per planet.</b></p>
+<form action="processMEAResult.php">
+	<tr>
+      <td>Name</td>
+	  <td><input type="text" name="username" id="name" /></td>
+    </tr>
+	<p></p>
+	<tr>
+			<td>Planet Name</td>
+			<td><input name="planetName" type="text"></td>
+	</tr>
+	<p></p>
+	<table id="mytable" width="300" border="1" cellspacing="0" cellpadding="2">
+		<tbody>
+			<tr id="resourceTR">
+				<td>Resource</td>
+				<td>
+					<select name="resource[]">
+						<option value="iron">Iron</option>
+						<option value="quartz">Quartz</option>
+						<option value="nickel">Nickel</option>
+						<option value="cobalt">Cobalt</option>
+						<option value="silver">Silver</option>
+						<option value="titanium">Titanium</option>
+						<option value="lucinite">Lucinite</option>
+						<option value="gold">Gold</option>
+						<option value="cosmethyst">Cosmethyst</option>
+						<option value="allurum">Allurum</option>
+						<option value="platinum">Platinum</option>
+						<option value="tilite">Trilite</option>
+					</select>
+				</td>
+				<td>
+				amount:
+				<td><input type="text" name="resourceAmount[]" id="name" /></td>
+				</td>
+			</tr>
+			
+		</tbody>
+	</table>	
+	<button type="button" id="add">Add row</button><p></p>
+	<button type="submit">submit</button>
+</form>
+
+</body>
+</html>
