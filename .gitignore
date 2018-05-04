@@ -1,0 +1,15 @@
+/vendor
+/node_modules
+/node_files/node_modules
+/public/storage
+/public/uploads
+Homestead.yaml
+Homestead.json
+.DS_Store
+.DS_Store?
+.env
+package-lock.json
+.history/
+phpmyadmin
+
+
